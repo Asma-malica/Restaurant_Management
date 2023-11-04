@@ -1,0 +1,632 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    
+<style>
+    
+    .go{
+background-image:url('https://img.freepik.com/free-photo/abstract-dark-blurred-background-smooth-gradient-texture-color-shiny-bright-website-pattern-banner-header-sidebar-graphic-art-image_1258-82996.jpg?w=740&t=st=1698852852~exp=1698853452~hmac=f1bdde65bb85d50c7fc3432df94cc3210713f6937ded9c80bcf4c3b569824ecb');
+background-repeat: no-repeat;
+background-size: cover;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 250px;
+  padding: 8px;
+  margin: 24px;
+  background-color: whitesmoke;
+  font-family: sans-serif;
+  }
+ 
+  .card img {
+      height:250px;
+      width:250px;
+  }
+ 
+  .title {
+  padding-top: 16px;
+  }
+
+  .container {
+padding: 2px 16px;
+  }
+  
+  </style>
+</head>
+<body>
+    <div class="go"><br><br>
+       <br><br>
+
+        <div style="padding-left:90%;padding-right: 5px;">
+        <button type="button" data-toggle="modal" data-target="#cart"style="font-size:20px;height:45px;background-color:#A2C4E0;"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16">
+            <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z"/>
+            <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+          </svg>(<span class="total-count"style="font-size:20px;"></span>)</button>
+           </div>
+           <div class="row">
+            <div class="col-lg ">
+              <div class="card">
+              <img src="https://img.freepik.com/free-photo/delicious-indian-dosa-composition_23-2149086051.jpg?size=626&ext=jpg&uid=R114073778&ga=GA1.1.906887392.1694617096&semt=sph" class="img-fluid" alt="Image" data-bs-toggle="modal" data-bs-target="#exampleModal" alt="ART" >
+              <div class="container">
+                  <h5>&emsp;&emsp;&emsp;DOSA</h5>
+                  <h6>Price:Rs-<s>430</s><br><br>Discount price:Rs-250 <br><br>          
+                  <a href="#" data-name="Dosa" data-price="500" class="add-to-cart btn btn-warning">Add to cart
+                      &emsp;&emsp;<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check" viewBox="0 0 16 16">
+                         <path d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708'.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+                         <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                       </svg></a>
+            </div></div></div>
+              <div class="col-lg ">
+                <div class="card">
+                <img src="https://img.freepik.com/premium-photo/south-indian-breakfast-recipe-idly-idli-rice-cake-served-with-coconut-chutney-sambar-selective-focus_466689-9565.jpg?size=626&ext=jpg&uid=R114073778&ga=GA1.1.906887392.1694617096&semt=sph" class="img-fluid" alt="Image" data-bs-toggle="modal" data-bs-target="#exampleModal1"alt="ART" >
+                <div class="container"><h5>&emsp;&emsp;&emsp;IDLY</h5>
+                <h6>Price:Rs-<s>200</s> <br><br>
+                  Discount price:Rs-150<br><br>
+                  <a href="#" data-name="Idly" data-price="150" class="add-to-cart btn btn-warning">Add to cart
+                    &emsp;&emsp;<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check" viewBox="0 0 16 16">
+                       <path d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+                       <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                     </svg></a>
+                 </div></div></div>
+              <div class="col-lg "style="padding: 0">
+                <div class="card">
+                <img src="https://img.freepik.com/premium-photo/indian-dish-spicy-chick-peas-curry-also-known-as-chola-chana-masala-commonly-chole-served-served-with-fried-puri-poori-colourful-wooden-background-selective-focus_466689-67277.jpg?size=626&ext=jpg&uid=R114073778&ga=GA1.1.906887392.1694617096&semt=sph" class="img-fluid" alt="Image" data-bs-toggle="modal" data-bs-target="#exampleModal2"alt="ART" >
+                <div class="container"><h5>&emsp;&emsp;&emsp;POORI</h5>
+                <h6>Price:Rs-<s>600</s> <br><br>
+                  Discount price:Rs-500<br><br>
+                  <a href="#" data-name="Poori" data-price="500" class="add-to-cart btn btn-warning">Add to cart
+                    &emsp;&emsp;<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check" viewBox="0 0 16 16">
+                       <path d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+                       <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                     </svg></a>
+              </div></div></div>
+              <div class="col-lg "><div class="card">
+                <img src="C:\newbill\Images\chpthi.img.jpg" class="img-fluid" alt="Image" data-bs-toggle="modal" data-bs-target="#exampleModal3"alt="ART" >
+                <div class="container"><h5>&emsp;&emsp;&emsp;CHAPATHI</h5>
+                <h6>Price:Rs-<s>450</s> <br><br>
+                  Discount price:Rs-375<br><br>
+                  <a href="#" data-name="chapathi" data-price="375" class="add-to-cart btn btn-warning">Add to cart
+                    &emsp;&emsp;<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check" viewBox="0 0 16 16">
+                       <path d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+                       <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                     </svg></a>
+              </div></div></div></div><br><br><br><br>
+        
+            <div class="row">
+              <div class="col-lg "><div class="card">
+                <img src="https://img.freepik.com/free-photo/delicious-arrangement-traditional-roti_23-2149034001.jpg?size=626&ext=jpg&uid=R114073778&ga=GA1.1.906887392.1694617096&semt=sph"class="img-fluid" alt="Image" data-bs-toggle="modal" data-bs-target="#exampleModal4" alt="ART" >
+                <div class="container"><h5>&emsp;&emsp;&emsp;KULCHA</h5>
+                <h6>Price:Rs-<s>700</s> <br><br>
+                  Discount price:Rs-500<br><br>
+                  <a href="#" data-name="Kulcha" data-price="500" class="add-to-cart btn btn-warning">Add to cart
+                     &emsp;&emsp;<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check" viewBox="0 0 16 16">
+                        <path d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+                        <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                      </svg></a>
+              </div></div></div>
+              <div class="col-lg "><div class="card">
+                <img src="https://img.freepik.com/free-photo/photo-indian-bread-isolated-white-background_125540-4001.jpg?size=626&ext=jpg&uid=R114073778&ga=GA1.1.906887392.1694617096&semt=sph"class="img-fluid" alt="Image" data-bs-toggle="modal" data-bs-target="#exampleModal5" alt="ART" >
+                <div class="container"><h5>&emsp;&emsp;&emsp;ROTTI</h5>
+                <h6>Price:Rs-<s>659</s> <br><br>
+                  Discount price:Rs-599<br><br>
+                  <a href="#" data-name="Rotti" data-price="599" class="add-to-cart btn btn-warning">Add to cart
+                     &emsp;&emsp;<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check" viewBox="0 0 16 16">
+                        <path d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+                        <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                      </svg></a>
+              </div></div></div>
+              <div class="col-lg "style="padding: 0"><div class="card">
+                <img src="https://img.freepik.com/premium-photo/uthappam-oothappam-topped-with-onion-carrots-served-with-chutney-top-view_742418-361.jpg?size=626&ext=jpg&uid=R114073778&ga=GA1.1.906887392.1694617096&semt=sph" class="img-fluid" alt="Image" data-bs-toggle="modal" data-bs-target="#exampleModal6"alt="ART" >
+                <div class="container"><h5>&emsp;&emsp;&emsp;UTHAPAM</h5>
+                <h6>Price:Rs-<s>600</s> <br><br>
+                  Discount price:Rs-550<br><br>
+                  <a href="#" data-name="Uthapam" data-price="550" class="add-to-cart btn btn-warning">Add to cart
+                     &emsp;&emsp;<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check" viewBox="0 0 16 16">
+                        <path d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+                        <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                      </svg></a>
+              </div></div></div>
+              <div class="col-lg "><div class="card">
+                <img src="https://img.freepik.com/free-photo/sandwich-with-egg-served-with-lettuce_140725-8045.jpg?size=626&ext=jpg&uid=R114073778&ga=GA1.1.906887392.1694617096&semt=sph" class="img-fluid" alt="Image" data-bs-toggle="modal" data-bs-target="#exampleModal7"alt="ART" >
+                <div class="container"><h5>&emsp;&emsp;&emsp;OMLETTE</h5>
+                <h6>Price:Rs-<s>999</s> <br><br>
+                  Discount price:Rs-760<br><br>
+                  <a href="#" data-name="Omlette" data-price="760" class="add-to-cart btn btn-warning">Add to cart
+                     &emsp;&emsp;<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check" viewBox="0 0 16 16">
+                        <path d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+                        <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                      </svg></a>
+              </div>
+            </div></div>
+        </div><br><br><br><br>
+        
+            <div class="row">
+                <div class="col-lg "><div class="card">
+                    <img src="https://img.freepik.com/free-photo/delicious-indian-food-tray_23-2148723505.jpg?size=626&ext=jpg&uid=R114073778&ga=GA1.1.906887392.1694617096&semt=sph"class="img-fluid" alt="Image" data-bs-toggle="modal" data-bs-target="#exampleModal8" alt="ART" >
+                    <div class="container"><h5>&emsp;&emsp;&emsp;MEALS</h5>
+                    <h6>Price:Rs-<s>900</s> <br><br>
+                    Discount price:Rs-850<br><br>
+                    <a href="#" data-name="Meals" data-price="850" class="add-to-cart btn btn-warning">Add to cart
+                     &emsp;&emsp;<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check" viewBox="0 0 16 16">
+                        <path d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+                        <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                      </svg></a>
+                  </div></div></div>
+                  <div class="col-lg "><div class="card">
+                    <img src="https://img.freepik.com/free-photo/high-angle-pakistan-meal-composition_23-2148821517.jpg?size=626&ext=jpg&uid=R114073778&ga=GA1.1.906887392.1694617096&semt=sph" class="img-fluid" alt="Image" data-bs-toggle="modal" data-bs-target="#exampleModal9"alt="ART" >
+                    <div class="container"><h5>&emsp;&emsp;&emsp;BIRIYANI</h5>
+                    <h6>Price:Rs-<s>950</s> <br><br>
+                      Discount price:Rs-909<br><br>
+                      <a href="#" data-name="Biriyani" data-price="909" class="add-to-cart btn btn-warning">Add to cart
+                     &emsp;&emsp;<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check" viewBox="0 0 16 16">
+                        <path d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+                        <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                      </svg></a>
+                  </div></div></div>
+                  <div class="col-lg "style="padding: 0"><div class="card">
+                    <img src="https://img.freepik.com/free-photo/top-view-delicious-pasta-plate_23-2150690791.jpg?size=626&ext=jpg&uid=R114073778&ga=GA1.1.906887392.1694617096&semt=sph" class="img-fluid" alt="Image" data-bs-toggle="modal" data-bs-target="#exampleModal10"alt="ART" >
+                    <div class="container">
+                        <h5>&emsp;&emsp;&emsp;PASTA</h5>
+                    <h6>Price:Rs-<s>959</s> <br><br>
+                      Discount price:Rs-889<br><br>
+                      <a href="#" data-name="Pasta" data-price="889" class="add-to-cart btn btn-warning">Add to cart
+                     &emsp;&emsp;<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check" viewBox="0 0 16 16">
+                        <path d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+                        <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                      </svg></a>
+                  </div></div></div>
+                  <div class="col-lg "><div class="card">
+                    <img src="https://img.freepik.com/premium-photo/indian-vegetable-pulav-biryani-made-using-basmati-rice-served-terracotta-bowl-selective-focus_466689-55600.jpg?size=626&ext=jpg&uid=R114073778&ga=GA1.1.906887392.1694617096&semt=ais" class="img-fluid" alt="Image" data-bs-toggle="modal" data-bs-target="#exampleModal11"alt="ART" >
+                    <div class="container">
+                        <h5>&emsp;&emsp;&emsp;FRIEDRICE</h5>
+                    <h6>Price:Rs-<s>879</s> <br><br>
+                      Discount price:Rs-743<br><br>
+                      <a href="#" data-name="FriedRice" data-price="743" class="add-to-cart btn btn-warning">Add to cart
+                     &emsp;&emsp;<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check" viewBox="0 0 16 16">
+                        <path d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+                        <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                      </svg></a>
+                  </div></div>
+                </div>
+            </div><br><br><br>
+        
+            <div class="row">
+              <div class="col-lg "><div class="card">
+                <img src="https://img.freepik.com/free-photo/closeup-shot-deliciously-prepared-chicken-served-with-onions-chili-sauce_181624-61705.jpg?size=626&ext=jpg&uid=R114073778&ga=GA1.1.906887392.1694617096&semt=ais"class="img-fluid" alt="Image" data-bs-toggle="modal" data-bs-target="#exampleModal12" alt="ART" >
+                <div class="container">
+                <h5>&emsp;&emsp;&emsp;CHICKEN65</h5>
+                <h6>Price:Rs-<s>300</s> <br><br>
+                  Discount price:Rs-250<br><br>
+                  <a href="#" data-name="Chicken65" data-price="250" class="add-to-cart btn btn-warning">Add to cart
+                     &emsp;&emsp;<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check" viewBox="0 0 16 16">
+                        <path d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+                        <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                      </svg></a>
+              </div></div></div>
+              <div class="col-lg "><div class="card">
+                <img src="https://img.freepik.com/free-photo/thai-food-tom-yum-kung-river-prawn-spicy-soup_1150-35456.jpg?size=626&ext=jpg&uid=R114073778&ga=GA1.1.906887392.1694617096&semt=ais" class="img-fluid" alt="Image" data-bs-toggle="modal" data-bs-target="#exampleModal13"alt="ART" >
+                <div class="container">
+                <h5>&emsp;&emsp;&emsp;PRAWNGRAVY</h5>
+                <h6>Price:Rs-<s>330</s> <br><br>
+                  Discount price:Rs-250<br><br>
+                  <a href="#" data-name="Prawngravy" data-price="250" class="add-to-cart btn btn-warning">Add to cart
+                     &emsp;&emsp;<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check" viewBox="0 0 16 16">
+                        <path d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+                        <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                      </svg></a>
+              </div></div></div>
+              <div class="col-lg "style="padding: 0"><div class="card">
+                <img src="https://img.freepik.com/free-photo/grilled-fish-with-vegetable-salad-onion-sumac-sprinkles_140725-10554.jpg?size=626&ext=jpg&uid=R114073778&ga=GA1.1.906887392.1694617096&semt=ais" class="img-fluid" alt="Image" data-bs-toggle="modal" data-bs-target="#exampleModal14"alt="ART" >
+                <div class="container">
+                    <h5>&emsp;&emsp;&emsp;FISHFRY</h5>
+                <h6>Price:Rs-<s>450</s> <br><br>
+                  Discount price:Rs-389<br><br>
+                  <a href="#" data-name="FishFry" data-price="389" class="add-to-cart btn btn-warning">Add to cart
+                     &emsp;&emsp;<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check" viewBox="0 0 16 16">
+                        <path d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+                        <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                      </svg></a>
+              </div></div></div>
+              <div class="col-lg "><div class="card">
+                <img src="https://img.freepik.com/free-photo/meatballs-sweet-sour-tomato-sauce_2829-19543.jpg?size=626&ext=jpg&uid=R114073778&ga=GA1.1.906887392.1694617096&semt=ais" class="img-fluid" alt="Image" data-bs-toggle="modal" data-bs-target="#exampleModal15"alt="ART" >
+                <div class="container"><h5>&emsp;&emsp;&emsp;MANJURIAN</h5>
+                <h6>Price:Rs-<s>430</s> <br><br>
+                  Discount price:Rs-250<br><br>
+                  <a href="#" data-name="Manjurian" data-price="250" class="add-to-cart btn btn-warning">Add to cart
+                     &emsp;&emsp;<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check" viewBox="0 0 16 16">
+                        <path d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+                        <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                      </svg></a>
+              </div>
+            </div></div>
+        </div>
+    
+         
+      
+    
+       
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+              <img src="https://img.freepik.com/free-photo/delicious-indian-dosa-composition_23-2149086051.jpg?size=626&ext=jpg&uid=R114073778&ga=GA1.1.906887392.1694617096&semt=sph" class="img-fluid" alt="Image" style="width: 100%; height: 500px;">
+            </div>
+            
+          </div>
+        </div>
+      </div>
+        </div><div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body">
+                <img src="https://img.freepik.com/premium-photo/south-indian-breakfast-recipe-idly-idli-rice-cake-served-with-coconut-chutney-sambar-selective-focus_466689-9565.jpg?size=626&ext=jpg&uid=R114073778&ga=GA1.1.906887392.1694617096&semt=sph" class="img-fluid" alt="Image" style="width: 100%; height: 400px;">
+              </div>
+              
+            </div>
+          </div>
+        </div><div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body">
+                <img src="https://img.freepik.com/premium-photo/indian-dish-spicy-chick-peas-curry-also-known-as-chola-chana-masala-commonly-chole-served-served-with-fried-puri-poori-colourful-wooden-background-selective-focus_466689-67277.jpg?size=626&ext=jpg&uid=R114073778&ga=GA1.1.906887392.1694617096&semt=sph" class="img-fluid" alt="Image" style="width: 100%; height: 400px;">
+              </div>
+              
+            </div>
+          </div>
+        </div><div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body">
+                <img src="C:\newbill\Images\chpthi.img.jpg" class="img-fluid" alt="Image" style="width: 100%; height: 400px;">
+              </div>
+              
+            </div>
+          </div>
+        </div><div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body">
+                <img src="https://img.freepik.com/free-photo/delicious-arrangement-traditional-roti_23-2149034001.jpg?size=626&ext=jpg&uid=R114073778&ga=GA1.1.906887392.1694617096&semt=sph" class="img-fluid" alt="Image" style="width: 100%; height: 400px;">
+              </div>
+              
+            </div>
+          </div>
+        </div><div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body">
+                <img src="https://img.freepik.com/free-photo/photo-indian-bread-isolated-white-background_125540-4001.jpg?size=626&ext=jpg&uid=R114073778&ga=GA1.1.906887392.1694617096&semt=sph" class="img-fluid" alt="Image" style="width: 100%; height: 400px;">
+              </div>
+              
+            </div>
+          </div>
+        </div><div class="modal fade" id="exampleModal6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body">
+                <img src="https://img.freepik.com/premium-photo/uthappam-oothappam-topped-with-onion-carrots-served-with-chutney-top-view_742418-361.jpg?size=626&ext=jpg&uid=R114073778&ga=GA1.1.906887392.1694617096&semt=sph" class="img-fluid" alt="Image" style="width: 100%; height: 400px;">
+              </div>
+              
+            </div>
+          </div>
+        </div><div class="modal fade" id="exampleModal7" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body">
+                <img src="https://img.freepik.com/free-photo/sandwich-with-egg-served-with-lettuce_140725-8045.jpg?size=626&ext=jpg&uid=R114073778&ga=GA1.1.906887392.1694617096&semt=sph" class="img-fluid" alt="Image" style="width: 100%; height: 400px;">
+              </div>
+              
+            </div>
+          </div>
+        </div><div class="modal fade" id="exampleModal8" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body">
+                <img src="https://img.freepik.com/free-photo/delicious-indian-food-tray_23-2148723505.jpg?size=626&ext=jpg&uid=R114073778&ga=GA1.1.906887392.1694617096&semt=sph" class="img-fluid" alt="Image" style="width: 100%; height: 400px;">
+              </div>
+            </div>
+          </div>
+        </div>
+        </div><div class="modal fade" id="exampleModal9" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body">
+                <img src="https://img.freepik.com/free-photo/high-angle-pakistan-meal-composition_23-2148821517.jpg?size=626&ext=jpg&uid=R114073778&ga=GA1.1.906887392.1694617096&semt=sph" class="img-fluid" alt="Image" style="width: 100%; height: 400px;">
+              </div>
+              
+            </div>
+          </div>
+        </div><div class="modal fade" id="exampleModal10" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body">
+                <img src="https://img.freepik.com/free-photo/top-view-delicious-pasta-plate_23-2150690791.jpg?size=626&ext=jpg&uid=R114073778&ga=GA1.1.906887392.1694617096&semt=sph" class="img-fluid" alt="Image" style="width: 100%; height: 400px;">
+              </div>
+              
+            </div>
+          </div>
+        </div><div class="modal fade" id="exampleModal11" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body">
+                <img src="https://img.freepik.com/premium-photo/indian-vegetable-pulav-biryani-made-using-basmati-rice-served-terracotta-bowl-selective-focus_466689-55600.jpg?size=626&ext=jpg&uid=R114073778&ga=GA1.1.906887392.1694617096&semt=ais" class="img-fluid" alt="Image" style="width: 100%; height: 400px;">
+              </div>
+              
+            </div>
+          </div>
+        </div><div class="modal fade" id="exampleModal12" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body">
+                <img src="https://img.freepik.com/free-photo/closeup-shot-deliciously-prepared-chicken-served-with-onions-chili-sauce_181624-61705.jpg?size=626&ext=jpg&uid=R114073778&ga=GA1.1.906887392.1694617096&semt=ais" class="img-fluid" alt="Image" style="width: 100%; height: 400px;">
+              </div>
+              
+            </div>
+          </div>
+        </div><div class="modal fade" id="exampleModal13" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body">
+                <img src="https://img.freepik.com/free-photo/thai-food-tom-yum-kung-river-prawn-spicy-soup_1150-35456.jpg?size=626&ext=jpg&uid=R114073778&ga=GA1.1.906887392.1694617096&semt=ais" class="img-fluid" alt="Image" style="width: 100%; height: 400px;">
+              </div>
+              
+            </div>
+          </div>
+        </div><div class="modal fade" id="exampleModal14" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body">
+                <img src="https://img.freepik.com/free-photo/grilled-fish-with-vegetable-salad-onion-sumac-sprinkles_140725-10554.jpg?size=626&ext=jpg&uid=R114073778&ga=GA1.1.906887392.1694617096&semt=ais" class="img-fluid" alt="Image" style="width: 100%; height: 400px;">
+              </div>
+              
+            </div>
+          </div>
+        </div><div class="modal fade" id="exampleModal15" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body">
+                <img src="https://img.freepik.com/free-photo/meatballs-sweet-sour-tomato-sauce_2829-19543.jpg?size=626&ext=jpg&uid=R114073778&ga=GA1.1.906887392.1694617096&semt=ais" class="img-fluid" alt="Image" style="width: 100%; height: 400px;">
+              </div>
+              
+            </div></div></div>     </div>
+          </div></div>
+          <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body"style="background-image:url('http://camphighland.com/wp-content/uploads/2018/05/blog-posts-bg.png');">
+                  <table class="show-cart table">
+                    
+                  </table>
+                  <div>Total price: Rs:<span class="total-cart"></span></div>
+                </div>
+                <div class="modal-footer"style="background-image:url('http://camphighland.com/wp-content/uploads/2018/05/blog-posts-bg.png');">
+                    <button class="clear-cart btn btn-danger">Clear Cart</button>
+                    <form action="C:\Users\91883\OneDrive\Desktop\python program\order.html">
+                      <button type="submit" class="clear-cart btn btn-primary">Order now</button>
+                    </form>
+                </div>
+              </div>
+            </div>
+          </div> </div>
+          
+    <script>
+        
+var shoppingCart = (function() {
+  cart = [];
+
+  function Item(name, price, count) {
+    this.name = name;
+    this.price = price;
+    this.count = count;
+  }
+  function saveCart() {
+    sessionStorage.setItem('shoppingCart', JSON.stringify(cart));
+  }
+  function loadCart() {
+    cart = JSON.parse(sessionStorage.getItem('shoppingCart'));
+  }
+  if (sessionStorage.getItem("shoppingCart") != null) {
+    loadCart();
+  }
+  var obj = {};
+  obj.addItemToCart = function(name, price, count) {
+    for(var item in cart) {
+      if(cart[item].name === name) {
+        cart[item].count ++;
+        saveCart();
+        return;
+      }
+    }
+    var item = new Item(name, price, count);
+    cart.push(item);
+    saveCart();
+  }
+  obj.setCountForItem = function(name, count) {
+    for(var i in cart) {
+      if (cart[i].name === name) {
+        cart[i].count = count;
+        break;
+      }
+    }
+  };
+  obj.removeItemFromCart = function(name) {
+      for(var item in cart) {
+        if(cart[item].name === name) {
+          cart[item].count --;
+          if(cart[item].count === 0) {
+            cart.splice(item, 1);
+          }
+          break;
+        }
+    }
+    saveCart();
+  }
+  obj.removeItemFromCartAll = function(name) {
+    for(var item in cart) {
+      if(cart[item].name === name) {
+        cart.splice(item, 1);
+        break;
+      }
+    }
+    saveCart();
+  }
+  obj.clearCart = function() {
+    cart = [];
+    saveCart();
+  }
+  obj.totalCount = function() {
+    var totalCount = 0;
+    for(var item in cart) {
+      totalCount += cart[item].count;
+    }
+    return totalCount;
+  }
+  obj.totalCart = function() {
+    var totalCart = 0;
+    for(var item in cart) {
+      totalCart += cart[item].price * cart[item].count;
+    }
+    return Number(totalCart.toFixed(2));
+  }
+  obj.listCart = function() {
+    var cartCopy = [];
+    for(i in cart) {
+      item = cart[i];
+      itemCopy = {};
+      for(p in item) {
+        itemCopy[p] = item[p];
+      }
+      itemCopy.total = Number(item.price * item.count).toFixed(2);
+      cartCopy.push(itemCopy)
+    }
+    return cartCopy;
+  }
+  return obj;
+})();
+$('.add-to-cart').click(function(event) {
+  event.preventDefault();
+  var name = $(this).data('name');
+  var price = Number($(this).data('price'));
+  shoppingCart.addItemToCart(name, price, 1);
+  displayCart();
+});
+$('.clear-cart').click(function() {
+  shoppingCart.clearCart();
+  displayCart();
+});
+function displayCart() {
+  var cartArray = shoppingCart.listCart();
+  var output = "";
+  for(var i in cartArray) {
+    output += "<tr>"
+      + "<td>" + cartArray[i].name + "</td>" 
+      + "<td>(" + cartArray[i].price + ")</td>"
+      + "<td><div class='input-group'><button class='minus-item input-group-addon btn btn-primary' data-name=" + cartArray[i].name + ">-</button>"
+      + "<input type='number' class='item-count form-control' data-name='" + cartArray[i].name + "' value='" + cartArray[i].count + "'>"
+      + "<button class='plus-item btn btn-primary input-group-addon' data-name=" + cartArray[i].name + ">+</button></div></td>"
+      + "<td><button class='delete-item btn btn-danger bg-danger' data-name=" + cartArray[i].name + ">X</button></td>"
+      + " = " 
+      + "<td>" + cartArray[i].total + "</td>" 
+      +  "</tr>";
+  }
+  $('.show-cart').html(output);
+  $('.total-cart').html(shoppingCart.totalCart());
+  $('.total-count').html(shoppingCart.totalCount());
+}
+$('.show-cart').on("click", ".delete-item", function(event) {
+  var name = $(this).data('name')
+  shoppingCart.removeItemFromCartAll(name);
+  displayCart();
+})
+$('.show-cart').on("click", ".minus-item", function(event) {
+  var name = $(this).data('name')
+  shoppingCart.removeItemFromCart(name);
+  displayCart();
+})
+$('.show-cart').on("click", ".plus-item", function(event) {
+  var name = $(this).data('name')
+  shoppingCart.addItemToCart(name);
+  displayCart();
+})
+$('.show-cart').on("change", ".item-count", function(event) {
+   var name = $(this).data('name');
+   var count = Number($(this).val());
+  shoppingCart.setCountForItem(name, count);
+  displayCart();
+  
+});
+displayCart();
+function pro(){
+    
+  new swal("DONE", "Your order has been placed successfully", "success")
+  } 
+    </script>
+</body>
+</html>
